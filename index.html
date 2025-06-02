@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente Virtual - Hospital Regional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Cabeçalho da aplicação -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Hospital Regional</h1>
+                        <div class="tagline">Assistente Virtual Inteligente</div>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button id="settingsButton" class="settings-button" aria-label="Configurações">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Painel de configurações -->
+        <div id="settingsPanel" class="settings-panel">
+            <div class="settings-header">
+                <h2>Configurações do Sistema</h2>
+                <button class="close-button" id="closeSettings">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="settings-content">
+                <div class="settings-group">
+                    <label for="serverUrl">URL do Servidor Ollama</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-server"></i>
+                        <input type="text" id="serverUrl" placeholder="http://localhost:11434/api/generate">
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <label for="modelName">Modelo de IA</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-brain"></i>
+                        <input type="text" id="modelName" placeholder="llama2">
+                    </div>
+                </div>
+                <div class="settings-actions">
+                    <button id="testConnection" class="secondary-button">
+                        <i class="fas fa-plug"></i> Testar Conexão
+                    </button>
+                    <button id="saveSettings" class="primary-button">
+                        <i class="fas fa-save"></i> Salvar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Container principal do chat -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="status-indicator online" id="statusIndicator"></div>
+                <span>Assistente Virtual</span>
+            </div>
+            
+            <div id="chatMessages" class="chat-messages">
+                <!-- As mensagens serão inseridas aqui dinamicamente -->
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Digite sua mensagem aqui..." autocomplete="off">
+                <button id="sendButton" aria-label="Enviar mensagem">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Rodapé da aplicação -->
+        <footer class="app-footer">
+            <div class="footer-content">
+                <div class="copyright">
+                    &copy; 2023 Hospital Regional. Todos os direitos reservados.
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Termos de Uso</a>
+                    <a href="#" class="footer-link">Política de Privacidade</a>
+                    <a href="#" class="footer-link">Suporte</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

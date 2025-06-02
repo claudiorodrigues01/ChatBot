@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Codificação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .test-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Codificação de Caracteres</h1>
+    
+    <div class="test-box">
+        <h2>Caracteres Especiais em Português</h2>
+        <p>Olá, como você está? Ação, coração, atenção, maçã, açúcar.</p>
+    </div>
+
+    <div class="test-box">
+        <h2>Teste de Script</h2>
+        <p id="test-output">Aguardando...</p>
+        <button onclick="testFunction()">Testar</button>
+    </div>
+
+    <script>
+        function testFunction() {
+            document.getElementById('test-output').textContent = 'Olá! Teste de acentuação: ação, coração, atenção.';
+        }
+    </script>
+</body>
+</html>
